@@ -1,7 +1,9 @@
 package com.cydeo.tests.day1_selenium_intro;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task1_YahooTitleVerification {
@@ -28,7 +30,11 @@ public class Task1_YahooTitleVerification {
         //2. Go to https://www.yahoo.com
         driver.get("https://www.yahoo.com");
 
-        Thread.sleep(3000);
+        WebElement cookiesButton = driver.findElement(By.name("agree"));
+        cookiesButton.click();
+
+        Thread.sleep(2000);
+
 
         //3. Verify title
         // Expected: Yahoo UK | News, email and search
@@ -44,7 +50,7 @@ public class Task1_YahooTitleVerification {
             System.out.println("Title is NOT as expected. Verification FAILED!");
         }
 
-
+        driver.close();
 
 
 
