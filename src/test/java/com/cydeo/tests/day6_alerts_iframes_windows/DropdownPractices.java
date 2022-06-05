@@ -86,6 +86,8 @@ public class DropdownPractices {
         Assert.assertEquals(actualMonth, expectedMonth);
         Assert.assertEquals(actualDay, expectedDay);
 
+
+
     }
 
     @AfterMethod

@@ -51,7 +51,9 @@ public class T4_IframePractice {
         driver.switchTo().parentFrame();
 
         WebElement headerText = driver.findElement(By.xpath("//h3"));
-        Assert.assertTrue(headerText.isSelected());
+
+        //assertion of header text is displayed or not
+        Assert.assertTrue(headerText.isDisplayed());
 
     }
 
